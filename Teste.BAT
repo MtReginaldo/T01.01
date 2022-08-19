@@ -7,37 +7,35 @@ echo              PROGRAMA
 echo  ==================================
 echo \ 1. Calculadora                   \
 echo \ 2. Propriedades do PC            \
-echo \ 3. Mudar Cor                     \
-echo \ 4. Abrir Programas               \
-echo \ 5. Opcoes                        \ 
-echo \ 6. Fechar                        \ 
+echo \ 3. Abrir Programas               \
+echo \ 4. Opcoes                        \ 
+echo \ 5. Fechar                        \ 
 echo  ==================================
 set /p pagina= Escolha um numero: 
 if %pagina% equ 1 goto calculadora
 if %pagina% equ 2 goto pc
-if %pagina% equ 3 goto cores
-if %pagina% equ 4 goto abrir
-if %pagina% equ 5 goto opcoes
-if %pagina% equ 6 goto fechar
-if %pagina% geq 7 goto erro
+if %pagina% equ 3 goto abrir
+if %pagina% equ 4 goto opcoes
+if %pagina% equ 5 goto fechar
+if %pagina% geq 6 goto erro
 
 :calculadora
 cls
 echo         Calculadora
 echo ==================================
-echo / 1. (+) Somar                   /
-echo / 2. (-) Diminuir                /
-echo / 3. (*) Multiplicar             /
-echo / 4. (/) Dividir                 /
-echo / 5. Voltar                      /
+echo / +. Somar                       /
+echo / -. Diminuir                    /
+echo / *. Multiplicar                 /
+echo / /. Dividir                     /
+echo / 1. Voltar                      /
 echo ==================================
-set /p escolha= Selecione a operação:
-if %escolha% equ 1 goto adicao
-if %escolha% equ 2 goto subtracao
-if %escolha% equ 3 goto multiplicacao
-if %escolha% equ 4 goto divisao
-if %escolha% equ 5 goto menu
-if %escolha% geq 6 goto erro
+set /p escolha= Selecione a operacao:
+if %escolha% equ + goto adicao
+if %escolha% equ - goto subtracao
+if %escolha% equ * goto multiplicacao
+if %escolha% equ / goto divisao
+if %escolha% equ 1 goto menu
+if %escolha% geq 2 goto erro
 
 :adicao
 echo Digite o primeiro numero:
@@ -48,11 +46,10 @@ echo ----------------------------
 set /a t=%x%+%y%
 echo %x%+%y%=%t%
 echo ----------------------------
-echo Deseja continuar?(1 = SIM, 2 = NAO)
-set /p a1=
-if %a1%==1 goto calculadora
-if %a1%==2 goto fechar
-pause
+echo 1 = SIM, 2 = NAO
+set /p opcao= Deseja continuar?
+if %opcao% equ 1 goto calculadora
+if %opcao% equ 2 goto menu
 
 :subtracao
 echo Digite um n£mero:
@@ -61,13 +58,12 @@ echo Digite outro n£mero:
 set /p y=
 echo ----------------------------
 set /a t=%x%-%y%
-echo O resultado foi %t%
+echo %x%-%y%=%t%
 echo ----------------------------
-echo Deseja continuar?(1 = SIM, 2 = NAO)
-set /p a2=
-if %a2%==1 goto calculadora
-if %a2%==2 goto fechar
-pause
+echo 1 = SIM, 2 = NAO
+set /p opcao= Deseja continuar?
+if %opcao% equ 1 goto calculadora
+if %opcao% equ2 goto menu
 
 :multiplicacao
 echo Digite um n£mero:
@@ -76,13 +72,12 @@ echo Digite outro n£mero:
 set /p y=
 echo ----------------------------
 set /a t=%x%*%y%
-echo O resultado foi %t%
+echo %x%*%y%=%t%
 echo ----------------------------
-echo Deseja continuar?(1 = SIM, 2 = NAO)
-set /p a3=
-if %a3%==1 goto calculadora
-if %a3%==2 goto fechar
-pause
+echo 1 = SIM, 2 = NAO
+set /p opcao= Deseja continuar?
+if %opcao% euq 1 goto calculadora
+if %opcao% equ 2 goto menu
 
 :divisao
 echo Digite um n£mero:
@@ -91,13 +86,12 @@ echo Digite outro n£mero:
 set /p y=
 echo ----------------------------
 set /a t=%x%/%y%
-echo O resultado foi %t%
+echo %x%/%y%=%t%
 echo ----------------------------
-echo Deseja continuar?(1 = SIM, 2 = NAO)
-set /p a4=
-if %a4%==1 goto calculadora
-if %a4%==2 goto fechar
-pause
+echo 1 = SIM, 2 = NAO
+set /p opcao= Deseja continuar?
+if %opcao% equ 1 goto calculadora
+if %opcao% equ 2 goto menu
 
 :pc
 cls
@@ -129,58 +123,54 @@ pause
 cls
 goto menu
 
-
 :abrir
 cls
 echo              ABRIR
 echo  ==================================
-echo \ 1. Google Chrome                 \ 
-echo \ 2. Bloco de Notas                \
-echo \ 3. AnyDesk                       \
+echo \ 1. Bloco de Notas                \ 
+echo \ 2. Excel                         \
+echo \ 3. PowerPoint                    \
 echo \ 4. Word                          \
 echo \ 5. Voltar                        \
 echo  ==================================
 set /p abrir= Escolha o programa para abrir: 
-if %abrir% equ 1 goto google
-if %abrir% equ 2 goto bloco
-if %abrir% equ 3 goto firefox
+if %abrir% equ 1 goto bloco
+if %abrir% equ 2 goto excel
+if %abrir% equ 3 goto powerpoint
 if %abrir% equ 4 goto word
 if %abrir% equ 5 goto menu
 if %abrir% geq 6 goto erro
 
-:google
-start chrome.exe
-pause
-cls
-goto abrir
 
 :bloco
 start notepad.exe
-pause
 cls
-goto abrir
+exit
 
-:firefox
-start anydesk.exe
-pause
+:excel
+start excel.exe
+exit
+
+:powerpoint
+start powerpnt.exe
 cls
-goto abrir
+exit
 
 :word
-start word.exe
-pause
+start winword.exe
 cls
-goto abrir
+exit
+
 
 :opcoes
 cls
 echo               OPCOES
 echo  ==================================
-echo  \ 1. Ajuda
-echo  \ 2. Abrir README.md
-echo  \ 3. Versão
-echo  \ 4. Desligar Computador
-echo  \ 5. Voltar
+echo  \ 1. Ajuda                       \ 
+echo  \ 2. Abrir README.md             \
+echo  \ 3. Versão                      \ 
+echo  \ 4. Desligar Computador         \
+echo  \ 5. Voltar                      \
 echo  ==================================
 set /p pagina= Escolha um numero: 
 if %pagina% equ 1 goto textoajuda
@@ -191,14 +181,27 @@ if %pagina% equ 5 goto menu
 if %abrir% geq 6 goto erro
 
 :textoajuda
-echo AAAAAAAAAAAAAAA
-echo aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-echo aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-echo aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-echo aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-echo aaaaaaaaaaaaaaaaaaaaaaaaaaaa
-pause 
-exit
+echo O que é o CMD do Windows?
+echo . 
+echo O Prompt de Comando, mais conhecido como CMD, e um aplicativo de 
+echo linha de comado disponivel na maioria dos sistemas operacionais Windows, 
+echo e e usado para executar os comandos inseridos. Esses comandos tem
+echo como função automatizar tarefas por meio de scripts e arquivos em lotes, 
+echo executando desde funcoes administrativas avançadas ate a solução de 
+echo certos tipo de problemas do sistema operacional. O CMD tambem e conhecido 
+echo como shell de comando, ou Prompt de Comando ou ainda CMD.exe.
+echo LEIA MAIS EM: <https://barsottisolucoes.com.br/o-que-e-o-cmd-do-windows/>
+echo .
+echo .
+echo SE DESEJAR EXPLICACAO SOBRE O PROGRAMA, ABRA O README.MD
+echo ==================================
+echo \ 1. Abrir README.md             \ 
+echo \ 2. Voltar                      \
+echo ==================================
+set /p pagina= Escolha um numero: 
+if %pagina% equ 1 goto readme
+if %pagina% equ 2 goto opcoes
+pause
 
 :readme
 start README.md
@@ -214,8 +217,12 @@ echo SISTEMAS OPERACIONAIS [SOP_1]
 echo PROFESSOR: LEANDERSON ANDRE
 echo ALUNO: MATEUS REGINALDO SARMENTO RODRIGUES
 echo ------------------------------     
+pause
 exit
-goto menu
+
+:desligarpc
+shutdown -s -t
+exit
 
 :erro
 echo -- OCORREU UM ERRO --
