@@ -11,20 +11,21 @@ Opções
 --help : Exibir as opções de uso do programa e sair
 --version : Exibir a versão e sair
 
-=============================================================
-O PROGRAMA
-=============================================================
 
-CALCULADORA
+==== O PROGRAMA ====
+
+=== CALCULADORA ===
 > Faz operações de Adição, Subtração, Multiplicação e Divisão entre dois números.
 
+=== POPRIEDADES DO COMPUTADOR ===
+> Executa o comando _systeminfo_ ao ser selecionado, mostrando as propriedades do computador, é possível também salvar os dados em .txt.
 
-PROPRIEDADES DO COMPUTADOR
-> Executa o comando _systeminfo_ ao ser selecionado, mostrando as 
+=== ABRIR PROGRAMAS ===
+> Abre o Word, Powerpoint, Excel e Bloco de Notas de acordo com número selecionado.
 
-ABRIR PROGRAMAS
-OPÇÕES
+=== OPÇÕES === 
+> Mostra a versão e ajuda, também abre o README.
 
-FECHAR
+=== FECHAR ===
  > Fecha o Programa.
 "Digite "6" na tela principal para fechar a janela do programa.
