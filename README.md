@@ -14,10 +14,14 @@ Opções
 =============================================================
 O PROGRAMA
 =============================================================
-CALCULADORA
-PROPRIEDADES DO COMPUTADOR
 
-MUDAR COR 
+CALCULADORA
+> Faz operações de Adição, Subtração, Multiplicação e Divisão entre dois números.
+
+
+PROPRIEDADES DO COMPUTADOR
+> Executa o comando _systeminfo_ ao ser selecionado, mostrando as 
+
 ABRIR PROGRAMAS
 OPÇÕES
 
