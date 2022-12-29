@@ -15,17 +15,16 @@ Opções
 ==== O PROGRAMA ====
 
 === CALCULADORA ===
-> Faz operações de Adição, Subtração, Multiplicação e Divisão entre dois números.
+Faz operações de Adição, Subtração, Multiplicação e Divisão entre dois números.
 
 === POPRIEDADES DO COMPUTADOR ===
-> Executa o comando _systeminfo_ ao ser selecionado, mostrando as propriedades do computador, é possível também salvar os dados em .txt.
+Executa o comando _systeminfo_ ao ser selecionado, mostrando as propriedades do computador, é possível também salvar os dados em .txt.
 
 === ABRIR PROGRAMAS ===
-> Abre o Word, Powerpoint, Excel e Bloco de Notas de acordo com número selecionado.
+Abre o Word, Powerpoint, Excel e Bloco de Notas de acordo com número selecionado.
 
 === OPÇÕES === 
-> Mostra a versão e ajuda, também abre o README.
+Mostra a versão e ajuda, também abre o README.
 
 === FECHAR ===
- > Fecha o Programa.
-"Digite "6" na tela principal para fechar a janela do programa.
+Fecha o Programa.
