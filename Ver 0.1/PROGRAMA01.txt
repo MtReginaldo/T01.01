@@ -209,7 +209,7 @@ echo Versao 0.1
 echo ------------------------------ 
 echo SISTEMAS OPERACIONAIS [SOP_1]
 echo PROFESSOR: LEANDERSON ANDRE
-echo ALUNO: MATEUS REGINALDO SARMENTO RODRIGUES
+echo ALUNO: MATEUS REGINALDO
 echo ------------------------------     
 pause
 exit
