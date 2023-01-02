@@ -215,7 +215,7 @@ exit
 echo ------------------------------ 
 echo Versao 1
 echo ------------------------------ 
-echo MATEUS REGINALDO SARMENTO RODRIGUES
+echo MtReginaldo
 echo ------------------------------     
 pause
 goto opcoes
